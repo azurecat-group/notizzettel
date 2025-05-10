@@ -1,7 +1,7 @@
 ---
-title: '첫 스터디, 다시 시작하는 스터디와 블로그'
-description: '친구와 스터디를 했고, 미래에 진행할 스터디를 설명합니다.'
-pubDate: '2025-05-10'
+title: 첫 스터디, 다시 시작하는 스터디와 블로그
+description: 친구와 스터디를 했고, 미래에 진행할 스터디를 설명합니다.
+pubDate: 2025-05-10
 author: Palbahngmiyine
 ---
 
