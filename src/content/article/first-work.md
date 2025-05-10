@@ -22,7 +22,7 @@ author: Palbahngmiyine
 그 과정의 일환으로 나는 notizzettel을 만들기 시작했고, cursor와 astro의 힘을 빌려 1시간 내로 obsidian 규칙도 허용하도록 만들어냈다.<br/>
 글을 써내려가고 있는 지금시점에선 아직 Cloudflare pages, 도메인 연결은 하지 않았는데, notizzettel의 디자인을 가다듬으면서 같이 작업해보려고 한다.<br/><br/>
 
-몇년의 회사생활을 거치면서 가장 중요하게 느꼈던 점은 스스로가 개밥먹기를 하지 않으면 그 기술과 경험은 실제 내 뇌에 축적되지 않는것을 느꼈다.  
+몇년의 회사생활을 거치면서 가장 중요하게 느꼈던 점은 스스로가 [개밥 먹기](https://ko.wikipedia.org/wiki/%EA%B0%9C%EB%B0%A5_%EB%A8%B9%EA%B8%B0)를 하지 않으면 그 기술과 경험은 실제 내 뇌에 축적되지 않는것을 느꼈다.  
 notizzettel과 스터디가 그 부분을 해소해주리라 믿고, 공부의 첫 발을 내딛어보려 한다.<br/><br/>
 
 nottizzettel이 어느정도 가다듬어지면 나는 Scala와 Pekko를 이용하여 Slack을 대체하는 오픈소스 웹 어플리케이션을 만들어보려고 한다.  

@@ -54,7 +54,21 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				margin: 0.5em 0;
 				text-align: left;
 			}
+			.article a {
+				text-decoration: underline;
+			}
 		</style>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const article = document.querySelector(".article");
+				if (article) {
+					const links = article.getElementsByTagName("a");
+					Array.from(links).forEach((link) => {
+						link.setAttribute("target", "_blank");
+					});
+				}
+			});
+		</script>
 	</head>
 
 	<body>
@@ -91,7 +105,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						<h1>{title}</h1>
 						<hr />
 					</div>
-					<slot />
+					<div
+						class="container flex flex-col items-center justify-center article"
+					>
+						<slot />
+					</div>
 				</div>
 			</article>
 		</main>
