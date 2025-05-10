@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import gfm from 'remark-gfm';
 import wikiLink from 'remark-wiki-link';
@@ -16,7 +15,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
-  integrations: [mdx(), sitemap()],
+  integrations: [sitemap()],
 
   markdown: {
       // 1) GitHub-flavored Markdown 지원
