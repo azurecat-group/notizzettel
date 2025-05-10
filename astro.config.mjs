@@ -12,9 +12,11 @@ import katex from 'rehype-katex';
 
 import tailwindcss from '@tailwindcss/vite';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://notizzettel.subin.app',
   integrations: [sitemap()],
 
   markdown: {
@@ -55,4 +57,6 @@ export default defineConfig({
     // @ts-ignore
     plugins: [tailwindcss()],
   },
+
+  adapter: cloudflare(),
 });
