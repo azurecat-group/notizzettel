@@ -52,11 +52,10 @@ export default defineConfig({
       katex,      // LaTeX → HTML/CSS 렌더링
     ],
   },
-
   vite: {
     // @ts-ignore
     plugins: [tailwindcss()],
   },
-
   adapter: cloudflare(),
+  output: 'static',
 });
