@@ -1,0 +1,23 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main class="text-center">
+			<h1>안녕하세요, 우리는 Azure cat입니다.</h1>
+			<p>우리는 각자의 목표를 가진 프로젝트, 공부를 진행하며 이곳에 기록을 남겨두고 있습니다.</p>
+			<p>각자가 가진 고민과 해결 방법은 이곳에 온전히 기록됩니다.</p>
+			<p>그것이 바로 우리가 Notizzettel을 만든 이유입니다.</p>			
+		</main>
+		<Footer />
+	</body>
+</html>
