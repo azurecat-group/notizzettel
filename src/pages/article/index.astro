@@ -1,12 +1,13 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+import { generatePastelGradient } from "../../utils/gradient";
 
-const posts = (await getCollection('article')).sort(
+const posts = (await getCollection("article")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
@@ -94,10 +95,31 @@ const posts = (await getCollection('article')).sort(
 						posts.map((post) => (
 							<li>
 								<a href={`/article/${post.id}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
+									{post.data.heroImage ? (
+										<img
+											width={720}
+											height={360}
+											src={post.data.heroImage}
+											alt=""
+										/>
+									) : (
+										<div
+											class="w-full h-76 mb-5 rounded-md"
+											style={{
+												background:
+													generatePastelGradient(),
+												borderRadius: "0.5rem",
+											}}
+										/>
+									)}
 									<h4 class="title">{post.data.title}</h4>
 									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
+										<FormattedDate
+											date={post.data.pubDate}
+										/>
+									</p>
+									<p class="text-slate-500 font-bold">
+										작성자: {post.data.author}
 									</p>
 								</a>
 							</li>
