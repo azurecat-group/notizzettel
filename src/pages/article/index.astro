@@ -118,9 +118,13 @@ const posts = (await getCollection("article")).sort(
 											date={post.data.pubDate}
 										/>
 									</p>
-									<p class="text-slate-500 font-bold">
+									{post.data.author != "" && post.data.author != undefined ? (
+										<p class="text-slate-500 font-bold">
 										작성자: {post.data.author}
-									</p>
+										</p>
+									) : (
+										<></>
+									)}
 								</a>
 							</li>
 						))
