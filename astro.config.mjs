@@ -25,21 +25,21 @@ export default defineConfig({
       gfm,
 
       // 2) Obsidian 위키링크 지원
-      [wikiLink, {
-        // [[Page|Alias]] 구문 허용
-        aliasDivider: '|',
-        // 링크 텍스트 → 페이지 파일명 매핑 함수			
-        /** @type {(name: string) => string} */
-        pageResolver: (name) =>
-          /* 예: "My Page" → "my-page" */
-          name
-            .trim()
-            .toLowerCase()
-            .replace(/\s+/g, '-'),
-        // 매핑된 파일명을 실제 주소로 변환
-        /** @type {(permalink: string) => string} */
-        hrefTemplate: (permalink) => `/article/${permalink}/`,
-      }],
+      // [wikiLink, {
+      //   // [[Page|Alias]] 구문 허용
+      //   aliasDivider: '|',
+      //   // 링크 텍스트 → 페이지 파일명 매핑 함수
+      //   /** @type {(name: string) => string} */
+      //   pageResolver: (name) =>
+      //     /* 예: "My Page" → "my-page" */
+      //     name
+      //       .trim()
+      //       .toLowerCase()
+      //       .replace(/\s+/g, '-'),
+      //   // 매핑된 파일명을 실제 주소로 변환
+      //   /** @type {(permalink: string) => string} */
+      //   hrefTemplate: (permalink) => `/article/${permalink}/`,
+      // }],
 
       // 3) Obsidian 어드모니션(callout) 지원
       admonitions,
